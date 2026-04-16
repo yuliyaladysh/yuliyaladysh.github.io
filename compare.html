@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compare versions — Yuliya Ladysh portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f0ebe4;
+      --ink: #0f1419;
+      --muted: #5c646c;
+      --accent: #c45c3e;
+      --accent-2: #1a4d4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Syne", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: clamp(1.5rem, 4vw, 3rem);
+    }
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+    .lead {
+      margin: 0 0 2rem;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 40rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 2px solid rgba(15, 20, 25, 0.12);
+      border-radius: 18px;
+      padding: 1.5rem 1.5rem 1.65rem;
+      box-shadow: 0 12px 36px rgba(15, 20, 25, 0.06);
+      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    a.card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(15, 20, 25, 0.1);
+    }
+    a.card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent-2);
+    }
+    a.card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+      padding: 0.2rem 0.45rem;
+      border-radius: 6px;
+      background: rgba(196, 92, 62, 0.15);
+      color: var(--accent);
+    }
+    .tag-b {
+      background: rgba(26, 77, 74, 0.12);
+      color: var(--accent-2);
+    }
+    .foot {
+      margin-top: 2.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .foot a {
+      color: var(--accent-2);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Compare portfolio versions</h1>
+    <p class="lead">
+      <strong>Classic</strong> is the earlier wording and layout (plain project list, no logo tiles, no extra outbound links in timeline and certs).
+      <strong>Enhanced</strong> is the current default at the site root — richer copy, thumbnails, and links. Four visual themes (<a href="pick-a-look.html">Looks</a>) exist for each version inside its folder.
+    </p>
+    <div class="grid">
+      <a class="card" href="classic/index.html">
+        <span class="tag">Classic</span>
+        <h2>Open classic site</h2>
+        <p>Same sections and four “Looks” variants as in <code>classic/</code>. Use this to compare tone and density side by side with the enhanced build.</p>
+      </a>
+      <a class="card" href="index.html">
+        <span class="tag tag-b">Enhanced</span>
+        <h2>Open enhanced site</h2>
+        <p>Default portfolio at the folder root — updated copy, project logo tiles, education favicons, timeline and certification links, and the same four themes.</p>
+      </a>
+    </div>
+    <p class="foot">
+      <a href="pick-a-look.html">Pick a look (enhanced)</a>
+      ·
+      <a href="classic/pick-a-look.html">Pick a look (classic)</a>
+    </p>
+  </div>
+</body>
+</html>
