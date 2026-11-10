@@ -44,6 +44,7 @@
   var counts=[].slice.call(d.querySelectorAll('.count'));
   if(!reduce&&'IntersectionObserver' in window){
     counts.forEach(function(c){c.textContent='0'});
+    [].slice.call(d.querySelectorAll('.plus2')).forEach(function(p){p.classList.add('wait')});
     var co=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         if(!e.isIntersecting) return;
@@ -53,6 +54,7 @@
           var k=Math.min(1,(t-t0)/dur), v=1-Math.pow(1-k,3);
           el.textContent=Math.round(to*v);
           if(k<1) requestAnimationFrame(step);
+          else { var pl=el.parentNode.querySelector('.plus2'); if(pl) pl.classList.remove('wait'); }
         })(performance.now());
         co.unobserve(el);
       });

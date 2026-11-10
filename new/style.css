@@ -158,3 +158,17 @@ li.ev .line time{color:var(--accent)}
 .tabs button:not([aria-selected="true"]):hover{border-color:var(--line)}
 @media (min-width:700px){.tabs{max-width:620px}.tabs button b{font-size:40px}.tabs button span{font-size:13px}}
 @media (max-width:420px){.tabs{gap:5px}.tabs button{padding:12px 2px 11px}.tabs button span{font-size:11px;max-width:9ch}}
+
+.tabs button b .count{display:inline;font:inherit;color:inherit}
+.tabs button b{white-space:nowrap}
+.plus2{font-style:normal;font-family:var(--serif);font-size:.62em;color:var(--accent);margin-left:1px;vertical-align:.18em;display:inline-block;transition:transform .45s var(--ease),opacity .45s}
+.js .plus2.wait{opacity:0;transform:scale(.4)}
+.tabs button[aria-selected="true"] .plus2{color:#f3c9b5}
+.tabs button b.word{font-style:italic}
+@media (max-width:420px){.tabs button span{max-width:10ch}}
+.tabs button b.word{font-size:30px;letter-spacing:-.02em}
+@media (max-width:420px){.tabs button span{max-width:none;font-size:10.5px;padding:0 2px}.tabs button b.word{font-size:29px}}
+.tabs button b{height:38px;display:flex;align-items:flex-end;justify-content:center}
+.tabs button .tight{white-space:nowrap;letter-spacing:-.01em}
+@media (max-width:420px){.tabs button .tight{font-size:10px}}
+@media (min-width:700px){.tabs button b{height:44px}}
