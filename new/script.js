@@ -92,6 +92,7 @@
       var on=k===i, p=d.getElementById(t.getAttribute('aria-controls'));
       t.setAttribute('aria-selected',on); t.tabIndex=on?0:-1; p.hidden=!on;
     });
+    var seg=d.querySelector('.seg'); if(seg) seg.style.setProperty('--i',i);
     if(focus) tabs[i].focus();
   }
   tabs.forEach(function(t,i){
