@@ -199,3 +199,4 @@ h1,h2,h3,.intro,.confess,.lede,.line b,.line span,.more p{text-wrap:pretty}
 .tert .ic{width:17px;height:17px}
 @media (min-width:700px){.contact{grid-template-columns:1fr 1fr;max-width:460px}}
 .hello-sub{text-wrap:balance;max-width:34ch}.worldwide{margin-top:12px}
+.marquee ul{animation-duration:70s}
