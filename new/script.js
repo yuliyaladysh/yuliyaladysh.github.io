@@ -118,6 +118,20 @@
     }
   },{passive:true});
 
+  // torch dots for the events in chapter II (tap to open that line)
+  var tw=d.querySelector('.torches');
+  if(tw){
+    var evs=[].slice.call(d.querySelectorAll('#p2 li[data-event]'));
+    evs.forEach(function(li,i){
+      li.classList.add('ev');
+      var t=d.createElement('button'); t.className='torch'; t.type='button'; t.tabIndex=-1;
+      t.innerHTML='<i style="animation-delay:'+(i*70)+'ms"></i><small>'+li.dataset.event.slice(2,4).replace(/^/,"’")+'</small>';
+      t.title=li.querySelector('b').textContent;
+      t.addEventListener('click',function(){ if(!li.classList.contains('open')) li.querySelector('.line').click(); li.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'}); });
+      tw.appendChild(t);
+    });
+    var lab=d.createElement('span'); lab.className='label'; lab.textContent=evs.length+' events'; tw.appendChild(lab);
+  }
   // expandable lines
   [].slice.call(d.querySelectorAll('.line')).forEach(function(b){
     b.addEventListener('click',function(){
